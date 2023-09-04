@@ -1,3 +1,7 @@
+
+<?php
+include 'connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +35,7 @@
 
     <div class="container">
         <h2>Student Information Form</h2>
-        <form action="#" method="post">
+        <form action="inserts.php" method="POST">
             <div class="form-columns">
                 <div class="column left-column">
                     <div class="form-group">
@@ -50,10 +54,6 @@
                         <label for="age">Age:</label>
                         <input type="number" id="age" name="age" required>
                     </div>
-                    <div class="form-group">
-                        <label for="address">Address:</label>
-                        <input type="text" id="address" name="address" required>
-                    </div>
                 </div>
                 <div class="column right-column">
                     <div class="form-group">
@@ -68,19 +68,9 @@
                         <label for="textarea">Educational Background:</label>
                         <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="subject_major">Subject Major:</label>
-                        <select id="subject_major" name="subject_major">
-                            <option value="math">Math</option>
-                            <option value="science">Science</option>
-                            <option value="history">History</option>
-                            <option value="english">English</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" name="submit" value="submit">Submit</button>
         </form>
     </div>
 </body>
