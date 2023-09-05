@@ -1,0 +1,26 @@
+Employment Website - Hiring Platform
+
+Members:
+Jade Raposa
+Christian Montesor
+John Raven Arieta
+
+
+Scope:
+
+Script Alert
+- js notification pop-ups
+Authentication
+- authenticates the username and password
+Display Table(JQuery) 
+- shows the list of data from the database 
+Create/Insert Data
+- can add data to the database
+Update Data
+- updates the data from the database
+View Data
+- shows the specific data from the database
+Delete Data
+- deletes data from the database
+Database(Xampp)
+
