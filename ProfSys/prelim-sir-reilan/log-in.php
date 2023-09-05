@@ -1,42 +1,43 @@
 <?php
-  session_start();
+//   session_start();
 
-  if (isset($_SESSION['id'])) {
-      header("");
-  }
+//   if (isset($_SESSION['id'])) {
+//       header("");
+//   }
 
-  // Include database connnectivity
+//   // Include database connnectivity
     
-  include_once('connection1.php');
+//   include_once('connection1.php');
   
-  if (isset($_POST['submit'])) {
+//   if (isset($_POST['submit'])) {
 
-      $errorMsg = "";
+//       $errorMsg = "";
 
-      $Username = mysqli_real_escape_string($conn, $_POST['Username']);
-      $Password = mysqli_real_escape_string($conn, $_POST['Password']); 
+//       $Username = mysqli_real_escape_string($conn, $_POST['Username']);
+//       $Password = mysqli_real_escape_string($conn, $_POST['Password']); 
       
-  if (!empty($Username) || !empty($Password)) {
-        $query  = "SELECT * FROM log_in WHERE Username = '$Username'";
-        $result = mysqli_query($conn, $query);
-        if(mysqli_num_rows($result) == 1){
-          while ($row = mysqli_fetch_assoc($result)) {
-            if (password_verify($Password, $row['Password'])) {
-                $_SESSION['id'] = $row['id'];
-                $_SESSION['Username'] = $row['Username'];
-                header("");
-            }else{
-                $errorMsg = "Email or Password is invalid";
-            }    
-          }
-        }else{
-          $errorMsg = "No user found on this email";
-        } 
-    }else{
-      $errorMsg = "Email and Password is required";
-    }
-  }
+//   if (!empty($Username) || !empty($Password)) {
+//         $query  = "SELECT * FROM log_in WHERE Username = '$Username'";
+//         $result = mysqli_query($conn, $query);
+//         if(mysqli_num_rows($result) == 1){
+//           while ($row = mysqli_fetch_assoc($result)) {
+//             if (password_verify($Password, $row['Password'])) {
+//                 $_SESSION['id'] = $row['id'];
+//                 $_SESSION['Username'] = $row['Username'];
+//                 header("");
+//             }else{
+//                 $errorMsg = "Email or Password is invalid";
+//             }    
+//           }
+//         }else{
+//           $errorMsg = "No user found on this email";
+//         } 
+//     }else{
+//       $errorMsg = "Email and Password is required";
+//     }
+//   }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +64,7 @@
                 <header>Login</header>
             </div>
             <div class="input-field">
-            <form action="log-in" method="POST">
+            <form action="log-in_code.php" method="POST">
                 <input type="text" class="input" placeholder="Username" name="Username" required>
                 <i class="bx bx-user"></i>
             </div>
@@ -72,7 +73,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-field">
-                <button type="submit" name= "login"class="submit" value="Login"> Log-in</button>
+                <button type="submit" name="submit" class="submit" value="Login"> Log-in</button>
             </div>
             <div class="bottom">
                 <div class="left">

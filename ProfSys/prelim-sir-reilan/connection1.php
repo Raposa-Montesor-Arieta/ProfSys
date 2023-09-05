@@ -1,15 +1,13 @@
 <?php
-	// Database configuration 
-	$dbHost     = "localhost"; 
-	$dbUsername = "root"; 
-	$dbPassword = ""; 
-	$dbName     = "rental"; 
-	 
-	// Create database connection 
-	$conn =  new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); 
-	 
-	// Check connection 
-	if ($conn->connect_error) { 
-	    die("Connection failed: " . $conn->connect_error); 
-	} 
+	// Establish a database connection
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$database = "rental";
+
+	$conn = new mysqli($servername, $username, $password, $database);
+
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
 ?>
