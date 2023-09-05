@@ -5,12 +5,14 @@ body {
     padding: 0;
 }
 
-.container {
+.container-box {
     max-width: 800px;
     margin: 60px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #3e4143;
+    border-radius: 10px;
 }
 
 .form-columns {
@@ -20,7 +22,7 @@ body {
 
 .column {
     flex: 1;
-    padding: 30px;
+    padding: 20px; /* Adjust padding as needed */
 }
 
 .form-group {
@@ -35,7 +37,7 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="email"],
-select {
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -49,16 +51,10 @@ button[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 20%;
-    margin-left: 40%;
+    width: 13%;
+    margin-left: 45%;
 }
 
 button[type="submit"]:hover {
     background-color: #0056b3;
-}
-
-/* Adjust the number of form fields in each column */
-.left-column .form-group:nth-child(5),
-.right-column .form-group:nth-child(4) {
-    display: none; /* Hide excess form fields */
 }
