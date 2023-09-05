@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
 
             if ($conn->query($sql) === TRUE) {
                 echo "<script>alert('CREATED SUCCESSFULLY'); </script>";
-                echo "<script>window.location.assign('form.php')</script>";
+                echo "<script>window.location.assign('list.php')</script>";
             } else {
                 echo "<script>alert('Error: " . $conn->error . "');</script>";
                 echo "<script>window.location.assign('form.php')</script>";
