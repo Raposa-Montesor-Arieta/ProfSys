@@ -6,10 +6,10 @@
 	$dbName     = "rental"; 
 	 
 	// Create database connection 
-	$con =  new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); 
+	$conn =  new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); 
 	 
 	// Check connection 
-	if ($con->connect_error) { 
-	    die("Connection failed: " . $con->connect_error); 
+	if ($conn->connect_error) { 
+	    die("Connection failed: " . $conn->connect_error); 
 	} 
 ?>

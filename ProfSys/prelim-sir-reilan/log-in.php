@@ -1,41 +1,41 @@
 <?php
-  
- 
-      
-  include 'connection1.php';
-  
-  if (isset($_POST['register'])) {
-      
-      $errorMsg = "";
-    
-      $email    = mysqli_real_escape_string($con, $_POST['Username']);
-      $password = mysqli_real_escape_string($con, $_POST['Password']);
-      $password = password_hash($password, PASSWORD_DEFAULT);
-      
-      $sql_query = "SELECT * FROM log_in WHERE Username = '$Username'";
-      $move = mysqli_query($con, $sql_query);
-        
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  session_start();
 
-          $errorMsg = "Email in not valid try again";
-
-      }else if(strlen($password) < 4) {
-          $errorMsg  = "Password should be six digits";
-      }else if($execute->num_rows == 1){
-          $errorMsg = "This Email is already exists";
-      }else{
-          $query= "INSERT INTO register (email,password) 
-                  VALUES('$email','$password')";
-          $result = mysqli_query($con, $query);
-      if ($result == true) {
-        echo "<script>alert('REGISTRATION COMPLETE!'); </script>";
-        echo "<script>window.location.assign('sign-in1.php');</script>" ;
-      }else{
-          $errorMsg  = "You are not Registred..Please Try again";
-      }
-    }
+  if (isset($_SESSION['id'])) {
+      header("");
   }
 
+  // Include database connnectivity
+    
+  include_once('connection1.php');
+  
+  if (isset($_POST['submit'])) {
+
+      $errorMsg = "";
+
+      $Username = mysqli_real_escape_string($conn, $_POST['Username']);
+      $Password = mysqli_real_escape_string($conn, $_POST['Password']); 
+      
+  if (!empty($Username) || !empty($Password)) {
+        $query  = "SELECT * FROM log_in WHERE Username = '$Username'";
+        $result = mysqli_query($conn, $query);
+        if(mysqli_num_rows($result) == 1){
+          while ($row = mysqli_fetch_assoc($result)) {
+            if (password_verify($Password, $row['Password'])) {
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['Username'] = $row['Username'];
+                header("");
+            }else{
+                $errorMsg = "Email or Password is invalid";
+            }    
+          }
+        }else{
+          $errorMsg = "No user found on this email";
+        } 
+    }else{
+      $errorMsg = "Email and Password is required";
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,6 +63,7 @@
                 <header>Login</header>
             </div>
             <div class="input-field">
+            <form action="log-in" method="POST">
                 <input type="text" class="input" placeholder="Username" name="Username" required>
                 <i class="bx bx-user"></i>
             </div>
@@ -71,7 +72,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-field">
-                <input type="submit" name= "login"class="submit" value="Login">
+                <button type="submit" name= "login"class="submit" value="Login"> Log-in</button>
             </div>
             <div class="bottom">
                 <div class="left">
