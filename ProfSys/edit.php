@@ -42,7 +42,7 @@ include 'connection.php';
         
         ?>
 
-    <form action="inserts.php" method="POST" enctype="multipart/form-data">
+    <form action="update.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" value="<?php echo $row['prof_id'];?>" class="form-control" placeholder="Enter your middle name" name="p_id">
     <div class="container-box">
         <h2>Professor Information Form</h2>
