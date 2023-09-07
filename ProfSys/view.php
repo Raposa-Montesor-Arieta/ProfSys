@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include 'functions/connection.php';
 
 // Check if 'p_id' parameter exists in the URL
 if (isset($_GET['id'])) {

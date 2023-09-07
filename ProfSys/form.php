@@ -1,13 +1,13 @@
 <?php
-include 'connection.php';
+include 'functions/connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profcss/form.css">
-    <link rel="stylesheet" href="profcss/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Form</title>
 </head>
 <body>
@@ -31,7 +31,7 @@ include 'connection.php';
             </div>
         </div>
     </nav>
-    <form action="inserts.php" method="POST" enctype="multipart/form-data">
+    <form action="functions/inserts.php" method="POST" enctype="multipart/form-data">
     <div class="container-box">
         <h2>Professor Information Form</h2>
         <div class="form-columns">

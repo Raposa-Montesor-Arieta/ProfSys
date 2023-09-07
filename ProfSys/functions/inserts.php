@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     // Handling image upload
     $img_name = $_FILES['img']['name'];
     $img_tmp = $_FILES['img']['tmp_name'];
-    $img_dir = "uploads/"; // Specify your image upload directory
+    $img_dir = "../uploads/"; // Specify your image upload directory
     $img_path = $img_dir . $img_name;
 
     // Check if the file was uploaded successfully
@@ -28,18 +28,18 @@ if (isset($_POST['submit'])) {
 
             if ($conn->query($sql) === TRUE) {
                 echo "<script>alert('CREATED SUCCESSFULLY'); </script>";
-                echo "<script>window.location.assign('list.php')</script>";
+                echo "<script>window.location.assign('../list.php')</script>";
             } else {
                 echo "<script>alert('Error: " . $conn->error . "');</script>";
-                echo "<script>window.location.assign('form.php')</script>";
+                echo "<script>window.location.assign('../form.php')</script>";
             }
         } else {
             echo "<script>alert('Error moving uploaded image to directory'); </script>";
-            echo "<script>window.location.assign('form.php')</script>";
+            echo "<script>window.location.assign('../form.php')</script>";
         }
     } else {
         echo "<script>alert('Error uploading image'); </script>";
-        echo "<script>window.location.assign('form.php')</script>";
+        echo "<script>window.location.assign('../form.php')</script>";
     }
 }
 ?>

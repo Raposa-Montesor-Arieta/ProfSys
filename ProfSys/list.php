@@ -24,6 +24,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profcss/style.css">
+    <link rel="stylesheet" href="profcss/view.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -130,7 +131,7 @@ $conn->close();
                     echo "<td>{$row['contact_num']}</td>";
                     echo "<td>";
                     echo '<a href="edit.php?p_id='.$row['prof_id'].'" class="action-button edit" >Edit</a>';// Styled Edit button
-                    echo "<a href='delete.php?p_id={$row['prof_id']}' class='action-button delete' data-toggle='modal' data-target='#deleteModal'>Delete</a>";
+                    echo "<a href='functions/delete.php?p_id={$row['prof_id']}' class='action-button delete' data-toggle='modal' data-target='#deleteModal'>Delete</a>";
                     echo "<a href='view.php?id={$row['prof_id']}' class='action-button view'>View</a>"; // Styled View button
                     echo "</td>";
                     echo "</tr>";

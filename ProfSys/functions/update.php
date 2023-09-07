@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 
     if ($conn->query($sql_query) === TRUE){
         echo "<script>alert('UPDATE SUCCESSFUL');</script>";
-        echo "<script>window.location.assign('list.php')</script>";
+        echo "<script>window.location.assign('../list.php')</script>";
     } else {
         echo "Error updating record: " . $conn->error;
     }
@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
             $row = $result->fetch_assoc();
         } else {
             echo "<script>alert('Record not found!');</script>";
-            echo "<script>window.location.assign('list.php')</script>";
+            echo "<script>window.location.assign('../list.php')</script>";
         }
     }
 }
