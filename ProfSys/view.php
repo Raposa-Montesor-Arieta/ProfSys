@@ -17,43 +17,13 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profcss/form.css">
     <link rel="stylesheet" href="profcss/style.css">
-    <title>Form</title>
+    <link rel="stylesheet" href="profcss/view.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100;300&display=swap" rel="stylesheet">
+    <title>View</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        .resume-container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-picture {
-            max-width: 150px;
-            border-radius: 50%;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .section-heading {
-            font-size: 20px;
-            margin-top: 20px;
-        }
-
-        .section-content {
-            margin-top: 10px;
-        }
-
-        /* Add more styling as needed */
+       
 
     </style>
 </head>
@@ -80,19 +50,21 @@ if (isset($_GET['id'])) {
 </nav>
 
 <div class="resume-container">
-    <!-- Profile Picture -->
-    <img class="profile-picture" src="image/profile.jpg" alt="Profile Picture">
-
+    <div class="top-right">
+        <img src="image/logo.png">
+    </div><br><br><br><br>
+   
+         <img src="uploads/<?php echo $row['img'];?>" alt="Professor Image" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #001;">
+         <div class="border"></div>
     <!-- Name -->
     <div class="content-area" value="<?php echo $row['prof_id'];?>">
-    <h1><?php echo $row['first_name'];?></h1>
-    <h3><?php echo $row['last_name'];?></h3>
-
-    <!-- Contact Information -->
-
-    <!-- Add more sections as needed -->
-
+        <h1><?php echo $row['first_name'];?></h1>&nbsp;
+        <h1><?php echo $row['mid_name'];?>&nbsp;
+        <h1><?php echo $row['last_name'];?></h1>&nbsp;
+    </div>
 </div>
+
+        </div>
 <?php
         }
     }
