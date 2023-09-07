@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['id'] = $userId;
                 
                 // Redirect to a login or dashboard page
-                header("Location: log-in.php");
+                header("Location:../log-in.php");
                 exit(); // Stop script execution after redirection
             } else {
                 $errorMsg = "Registration failed. Please try again later.";

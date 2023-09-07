@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include 'functions/connection.php';
 
 // Fetch data from the database
 $sql = "SELECT prof_id, first_name, last_name, age, email, contact_num FROM profs";
@@ -24,7 +24,6 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profcss/style.css">
-    <link rel="stylesheet" href="profcss/view.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>

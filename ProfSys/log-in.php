@@ -38,13 +38,14 @@
 //   }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="boxicons/css/boxicons.css">
     <title>Ludiflex | Login</title>
 </head>
@@ -64,7 +65,7 @@
                 <header>Login</header>
             </div>
             <div class="input-field">
-            <form action="log-in_code.php" method="POST">
+            <form action="functions/log-in_code.php" method="POST">
                 <input type="text" class="input" placeholder="Username" name="Username" required>
                 <i class="bx bx-user"></i>
             </div>
