@@ -22,7 +22,7 @@
                 <img src="image/logo.png">
             </div>
             <div class="top-header">
-                <header>Sign-In</header>
+                <header>Sign-Up</header>
             </div>
             <div class="input-field">
             <form action="functions/reg_code.php" method="POST">
@@ -34,9 +34,9 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-field">
-                <button type="submit" name="submit" class="submit" value="Login"> Sign Up</button>
+                <button type="submit" name="submit" class="submit" value="Login">Register</button>
+            </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
