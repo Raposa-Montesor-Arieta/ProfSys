@@ -116,7 +116,7 @@ i{
     margin-left: auto;
     margin-right: auto;
     font-size: small;
-    color: #030303;
+    color: white;
     margin-bottom: 1.5rem;
     font-weight: 100;
 }
@@ -126,12 +126,15 @@ i{
 label a{
     color: #fff;
     text-decoration: none;
-}
+    }
+    
 a.underline {
     text-decoration: none;
-    color: black;
+    color: white;
     }
     a.underline:hover {
-        text-decoration: underline;
+        /* text-decoration: underline; */
         font-weight: bold;
+        color: red;
+        transition: 1.5s ease-in-out;
     }

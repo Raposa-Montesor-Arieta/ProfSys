@@ -87,13 +87,13 @@
 
 .text-decoration-none {
     text-decoration: none;
-    color: black;
+    color: white;
     /* font-weight: bold; */
     }
     .text-decoration-none p:hover {
         scale: 1.3;
         font-weight: bold;
-        text-decoration: underline;
+        transition: 50ms ease-in-out;
     }
     .image2{
         display: flex;

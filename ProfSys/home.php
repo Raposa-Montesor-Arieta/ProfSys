@@ -26,10 +26,10 @@ $query = "SELECT * FROM profs";
     <nav>
         <div class="nav-left">
             <img src="image/logo.png" class="logo">
-            <ul>
+            <!-- <ul>
                 <a href="#"><li><img src="image/home.png"></li></a>
                 <a href="list.php"><li><img src="image/inbox.png"></li></a>
-            </ul>
+            </ul> -->
         </div>
         <div class="nav-right">
 

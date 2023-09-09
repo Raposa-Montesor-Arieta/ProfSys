@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="boxicons/css/boxicons.css">
     <script src="js/rememberme.js" type="text/javascript"></script>
-    <title>Ludiflex | Login</title>
+    <title>Ludiflex | Log-In</title>
 </head>
 <body>
     <div class="box">
@@ -63,7 +63,7 @@
                 <img src="image/logo.png">
             </div>
             <div class="top-header">
-                <header>Login</header>
+                <header>Log-In</header>
             </div>
             <div class="input-field">
             <form action="functions/log-in_code.php" method="POST">
@@ -75,7 +75,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-field">
-                <button type="submit" name="submit" class="submit" value="Login"> Log-in</button>
+                <button type="submit" name="submit" class="submit" value="Login"> Log-In</button>
             </div>
             <div class="hhh">
                 Don't have an account?<a href="registration.php" class="underline">
