@@ -91,8 +91,8 @@ $conn->close();
         <div class="nav-left">
             <img src="image/logo.png" class="logo">
             <ul>
-                <li><img src="image/home.png"></li>
-                <li><img src="image/inbox.png"></li>
+                <a href="home.php"><li><img src="image/home.png"></li></a>
+                <a href="#"><li><img src="image/inbox.png"></li></a>
             </ul>
         </div>
         <div class="nav-right">

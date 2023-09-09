@@ -27,8 +27,8 @@ $query = "SELECT * FROM profs";
         <div class="nav-left">
             <img src="image/logo.png" class="logo">
             <ul>
-                <li><img src="image/home.png"></li>
-                <li><img src="image/inbox.png"></li>
+                <a href="#"><li><img src="image/home.png"></li></a>
+                <a href="list.php"><li><img src="image/inbox.png"></li></a>
             </ul>
         </div>
         <div class="nav-right">
@@ -38,7 +38,8 @@ $query = "SELECT * FROM profs";
                 <input type="text" placeholder="Search"> 
             </div>
             <div class="nav-user-icon online">
-                <img src="image/profile.jpg">
+                <!-- <img src="image/profile.jpg"> -->
+                <a href=""><p>Log In</p></a>
             </div>
         </div>
     </nav>
