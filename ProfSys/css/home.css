@@ -37,7 +37,9 @@
 }
 .nums h1{
     font-family: 'Lexend Giga', sans-serif;
-    margin-left: 530px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     margin-top: 20px;
     color: #3f4144;
 }
