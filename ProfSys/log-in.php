@@ -85,7 +85,7 @@
                     <label for="check"> Remember Me</label>
                 </div>
                 <div class="right">
-                    <label><a href="#">Forgot password?</a></label>
+                    <label><a href="forgot_pass.php">Forgot password?</a></label>
                 </div>
             </div>
         </div>
