@@ -1,0 +1,85 @@
+.left_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    }
+    .left_img img{
+        /* margin: 50px 80px;
+        width: 1350px;
+        height: 620px;
+        position: relative; */
+        width: 98%;
+        max-width: 100%;
+        max-height: 96%;
+    }
+
+.head{
+    position: absolute;
+    top: 32%;
+    left: 50%; 
+    color: rgb(18, 78, 181);
+    font-size: 40px;
+}
+.head h1{
+    font-family: 'Lexend Giga', sans-serif;
+    color: #ffff;
+    font-size: 80px;
+}
+.head p{
+    font-family: 'Lexend Giga', sans-serif;
+    color: #ffff;
+}
+.line1{
+    border: 1px solid rgb(147, 147, 212);
+    width: 1250px;
+    margin: 0 auto;
+}
+.nums h1{
+    font-family: 'Lexend Giga', sans-serif;
+    margin-left: 530px;
+    margin-top: 20px;
+    color: #3f4144;
+}
+.box1{
+    border: 0 solid black;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(28, 137, 201);
+    outline: none;
+    border-radius: 5%;
+    margin-left: 50px;
+    color: #fff;
+}
+.box1 h2{
+    font-family: 'Lexend Giga', sans-serif;
+    text-align: center;
+}
+.box1.button h1{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Lexend Giga', sans-serif;
+}
+.button-link {
+    text-decoration: none;
+}
+
+.box1.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box1.button:hover {
+    background-color: #0056b3;
+}
+.butt_container{
+    display: flex;
+    justify-content: center;
+}
+

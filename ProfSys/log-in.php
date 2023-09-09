@@ -47,6 +47,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="boxicons/css/boxicons.css">
+    <script src="js/rememberme.js" type="text/javascript"></script>
     <title>Ludiflex | Login</title>
 </head>
 <body>
@@ -77,12 +78,13 @@
                 <button type="submit" name="submit" class="submit" value="Login"> Log-in</button>
             </div>
             <div class="hhh">
-                Don't have an account?<a href="registration.php" style="text-decoration: none; color: black; :hover { color: black; }">   Sign up</a>
+                Don't have an account?<a href="registration.php" class="underline">
+                 Sign up</a>
             </div>
             <div class="bottom">
                 <div class="left">
-                    <input type="checkbox"  id="check">
-                    <label for="check"> Remember Me</label>
+                    <input type="checkbox" name="rememberMe" value="true" id="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
                 </div>
                 <div class="right">
                     <label><a href="forgot_pass.php">Forgot password?</a></label>

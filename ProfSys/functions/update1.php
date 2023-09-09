@@ -10,9 +10,11 @@
                     $last_name = $_POST["last_name"];
                     $age = $_POST["age"];
                     $contact_number = $_POST["contact_number"];
+                    $special = $_POST ["specialization"];
                     $address = $_POST["address"];
                     $email = $_POST["email"];
                     $educational_background = $_POST["textarea"];
+                    $work = $_POST["work_experience"];
 
                 $filename = htmlspecialchars (basename($_FILES["img"]["name"]));
 
@@ -24,12 +26,12 @@
                     if($filename == NULL)
                     {
                         // UPDATE WITH EXISTING IMAGE
-                        $image_data = $stud_row['image'];
+                        $image_data = $stud_row['img'];
                     }
                     else 
                     {
                         // UPDATE WITH NEW IMAGE AND DELETE WITH OLD IMAGE
-                        if($img_path = "uploads/".$stud_row['image'])
+                        if($img_path = "uploads/".$stud_row['img'])
                         {
                             unlink($img_path);
                             $image_data = $filename;
@@ -50,13 +52,13 @@
                 {
                     // UPDATE WITH EXISTING IMAGE
                     echo "<script>window.alert('Student Record Successfully Added!'); </script>";
-                    echo "<script>window.location.assign('students2.php');</script>";
+                    echo "<script>window.location.assign('list.php');</script>";
                 }
                 else 
                 {
                     // UPDATE WITH NEW IMAGE AND DELETE WITH OLD IMAGE
-                    move_uploaded_file($_FILES["image"]["tmp_name"],"../../images/" . $_FILES["image"]["name"]);
-                    echo "<script>window.alert('Student Record Successfully Added!'); </script>";
+                    move_uploaded_file($_FILES["img"]["tmp_name"],"uploads/" . $_FILES["img"]["name"]);
+                    echo "<script>window.alert('Professor Record Successfully Added!'); </script>";
                     echo "<script>window.location.assign('list.php');</script>";
                 } 
                 // echo "<script>alert('Student Record Successfully Updated!'); window.location.assign('students2.php'); </script>";

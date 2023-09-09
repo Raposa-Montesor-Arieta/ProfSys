@@ -15,9 +15,9 @@ if (isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profcss/form.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="profcss/view.css">
+    <link rel="stylesheet" href="profcss/view1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100;300&display=swap" rel="stylesheet">
@@ -49,22 +49,30 @@ if (isset($_GET['id'])) {
     </div>
 </nav>
 
-<div class="resume-container">
-    <div class="top-right">
-        <img src="image/logo.png">
-    </div><br><br><br><br>
-   
-         <img src="uploads/<?php echo $row['img'];?>" alt="Professor Image" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #001;">
-         <div class="border"></div>
-    <!-- Name -->
-    <div class="content-area" value="<?php echo $row['prof_id'];?>">
-        <h1><?php echo $row['first_name'];?></h1>&nbsp;
-        <h1><?php echo $row['mid_name'];?>&nbsp;
-        <h1><?php echo $row['last_name'];?></h1>&nbsp;
-    </div>
-</div>
-
+<div class="resume">
+        <div class="left">
+            <img src="uploads/<?php echo $row['img'];?>" alt="Professor Image" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid #001;">
+            <h2><?php echo $row['first_name'] . ' ' . $row['mid_name'] . ' ' . $row['last_name'];?></h2>
+            <ul><br>
+                <li>Email: <?php echo $row['email'];?></li><br>
+                <li>Phone: <?php echo $row['contact_num'];?></li><br>
+                <li>Address: <?php echo $row['address'];?></li>
+            </ul>
         </div>
+        <div class="right">
+            <h2>Educational Background</h2>
+            <p><?php echo $row['educ'];?></p>
+            
+            <h2>Specialization</h2>
+            <p><?php echo $row['specialization'];?></p>
+            
+            <h2>Work Experience</h2>
+            <p><?php echo $row['experience'];?></p>
+            
+        </div>
+    </div>
+    
+</div>
 <?php
         }
     }

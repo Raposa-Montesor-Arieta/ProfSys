@@ -42,7 +42,7 @@ include 'functions/connection.php';
         
         ?>
 
-    <form action="functions/update.php" method="POST" enctype="multipart/form-data">
+    <form action="functions/update1.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" value="<?php echo $row['prof_id'];?>" class="form-control" placeholder="Enter your middle name" name="p_id">
     <div class="container-box">
         <h2>Professor Information Form</h2>
@@ -72,6 +72,10 @@ include 'functions/connection.php';
                     <label for="contact_number">Contact Number:</label>
                     <input type="text" id="contact_number" name="contact_number" required value="<?php echo $row['contact_num'];?>">
                 </div>
+                <div class="form-group">
+                    <label for="textarea">Specialization:</label>
+                    <textarea id="specialization" name="specialization" rows="4" cols="50"><?php echo $row['specialization']; ?></textarea>
+                </div>
             </div>
             <div class="column">
                 <div class="form-group">
@@ -91,6 +95,10 @@ include 'functions/connection.php';
                 <div class="form-group">
                     <label for="textarea">Educational Attainment:</label>
                     <textarea id="textarea" name="textarea" rows="4" cols="50"><?php echo $row['educ']; ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="textarea">Educational Attainment:</label>
+                    <textarea id="work_experience" name="work_experience" rows="4" cols="50"><?php echo $row['experience']; ?></textarea>
                 </div>
             </div>
         </div>
