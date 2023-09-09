@@ -61,13 +61,13 @@ if (isset($_GET['id'])) {
         </div>
         <div class="right">
             <h2>Educational Background</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula bibendum purus quis egestas.</p>
+            <p><?php echo $row['educ'];?></p>
             
             <h2>Specialization</h2>
-            <p>Bachelor's Degree in Computer Science<br>University Name<br>Graduation Year: 20XX</p>
+            <p><?php echo $row['specialization'];?></p>
             
             <h2>Work Experience</h2>
-            <p>Web Developer at XYZ Company<br>May 20XX - Present<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu urna.</p>
+            <p><?php echo $row['experience'];?></p>
             
         </div>
     </div>

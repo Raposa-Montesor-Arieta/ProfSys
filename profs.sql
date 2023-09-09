@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2023 at 06:53 AM
+-- Generation Time: Sep 09, 2023 at 08:35 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -39,19 +39,18 @@ CREATE TABLE `profs` (
   `email` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
   `educ` longtext NOT NULL,
-  `experience` varchar(255) NOT NULL
+  `experience` varchar(255) NOT NULL,
+  `status` int(100) NOT NULL DEFAULT 1 COMMENT '1 = active, 0 = inactive'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `profs`
 --
 
-INSERT INTO `profs` (`prof_id`, `first_name`, `mid_name`, `last_name`, `age`, `contact_num`, `specialization`, `address`, `email`, `img`, `educ`, `experience`) VALUES
-(20, 'Rayven ', 'Padre', 'Moratalla', 21, 12345678911, '', 'GUINOBATAN', 'chrasdasd@gmail.com', '330613924_519250096985696_463167490740670324_n.jpg', 'BS Nursing\r\n', '0'),
-(22, 'Raven', 'Musa', 'Arieta', 21, 12345678901, '', 'Malabog', 'rave@gmail.com', '06603336 (1).jpg', 'asd123', '0'),
-(23, 'Clark Nelson', 'Lotino', 'Montesor', 20, 9462704475, '', 'Sagpon Daraga', 'christianmontesor@gmail.com', 'asa3.jpg', 'Biology', '0'),
-(24, 'Chan', 'Lotino', 'Montesor', 21, 9104291800, 'Chemistry\r\nBiology\r\nPhysics', 'Sagpon Daraga', 'christianmontesor@gmail.com', '244246245_4405238442888410_3943852264469229727_n.jpg', 'HS GRAD\r\nCOLLEGE GRAD\r\nTAKING MASTERAL', '0'),
-(25, 'Maria Jovelle', 'asd', 'Nocomora', 24, 1234343434, 'BS Ed Math', 'GUINOBATAN', 'jovs@gmail.com', '../uploads/330613924_519250096985696_463167490740670324_n.jpg', 'COLLEGE GRAD', '2 years teaching MORMS');
+INSERT INTO `profs` (`prof_id`, `first_name`, `mid_name`, `last_name`, `age`, `contact_num`, `specialization`, `address`, `email`, `img`, `educ`, `experience`, `status`) VALUES
+(23, 'Clark Nelson', 'Lotino', 'Montesor', 20, 9462704475, '', 'Sagpon Daraga', 'christianmontesor@gmail.com', 'asa3.jpg', 'Biology', '0', 1),
+(24, 'Chan', 'Lotino', 'Montesor', 21, 9104291800, 'Chemistry\r\nBiology\r\nPhysics', 'Sagpon Daraga', 'christianmontesor@gmail.com', '244246245_4405238442888410_3943852264469229727_n.jpg', 'HS GRAD\r\nCOLLEGE GRAD\r\nTAKING MASTERAL', '0', 1),
+(25, 'Maria Jovelle', 'asd', 'Nocomora', 24, 1234343434, 'BS Ed Math', 'GUINOBATAN', 'jovs@gmail.com', '../uploads/330613924_519250096985696_463167490740670324_n.jpg', 'COLLEGE GRAD', '2 years teaching MORMS', 1);
 
 --
 -- Indexes for dumped tables
