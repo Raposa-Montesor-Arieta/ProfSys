@@ -15,7 +15,7 @@ $query = "SELECT * FROM profs";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="profcss/home.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100;300&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@ $query = "SELECT * FROM profs";
             </div>
             <div class="nav-user-icon online">
                 <!-- <img src="image/profile.jpg"> -->
-                <a href=""><p>Log In</p></a>
+                <a class="text-decoration-none" href="log-in.php"><p>Log-In</p></a>
             </div>
         </div>
     </nav>
