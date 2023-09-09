@@ -23,13 +23,11 @@ if (isset($_POST['submit'])) {
 
         if ($result->num_rows == 1) {
             $errorMsg = "This Email is already in use. Please choose another.";
-        } else {
-            // Hash the password
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        } 
 
             // Insert the user into the database
             $query = "INSERT INTO log_in (Username, Password) 
-                      VALUES('$username', '$hashedPassword')";
+                      VALUES('$username', '$password')";
             $insertResult = mysqli_query($conn, $query);
 
             if ($insertResult) {
@@ -45,5 +43,4 @@ if (isset($_POST['submit'])) {
             }
         }
     }
-}
 ?>
