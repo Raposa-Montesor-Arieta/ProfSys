@@ -6,8 +6,8 @@ include 'functions/connection.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profcss/form.css">
-    <link rel="stylesheet" href="profcss/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="profcss/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,10 +37,10 @@ include 'functions/connection.php';
     </nav>
     
     <div class="left_img">
-        <img src="image/tut.jpg">
+        <img src="image/bg.png">
         <div class="head">
             <h1>ACADEMIC <br> EXELLENCE</h1>
-            <p>One-on-One Path to Success </p>
+            <p>One-on-One Path<br> to Success </p>
         </div>
     </div>
     <div class="line1"></div>

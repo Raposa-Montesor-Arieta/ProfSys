@@ -9,18 +9,20 @@ if(isset($_POST['submit'])){
     $last_name = $_POST["last_name"];
     $age = $_POST["age"];
     $contact_number = $_POST["contact_number"];
+    $special = $_POST ["specialization"];
     $address = $_POST["address"];
     $email = $_POST["email"];
     $educational_background = $_POST["textarea"];
+    $work = $_POST["work_experience"];
     
     // Handle image upload
     $filename = $_FILES["img"]["name"];
     $tmp_name = $_FILES["img"]["tmp_name"];
-    $img_destination = "uploads/".$filename;
+    $img_destination = "../uploads/".$filename;
     move_uploaded_file($tmp_name, $img_destination);
 
     // Update the record in the database
-    $sql_query = "UPDATE `profs` SET `first_name`='$first_name', `mid_name`='$middle_name', `last_name`='$last_name', `age`='$age', `contact_num`='$contact_number', `address`='$address', `email`='$email', `educ`='$educational_background', `img`='$img_destination' WHERE prof_id = '$p_id'";
+    $sql_query = "UPDATE `profs` SET `first_name`='$first_name', `mid_name`='$middle_name', `last_name`='$last_name', `age`='$age', `contact_num`='$contact_number', `specialization`='$special', `address`='$address', `email`='$email', `educ`='$educational_background', `experience`='$work', `img`='$img_destination' WHERE prof_id = '$p_id'";
 
     if ($conn->query($sql_query) === TRUE){
         echo "<script>alert('UPDATE SUCCESSFUL');</script>";

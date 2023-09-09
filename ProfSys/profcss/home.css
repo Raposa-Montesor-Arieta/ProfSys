@@ -1,22 +1,25 @@
 .left_img img{
-    margin: 50px 70px;
-    width: 750px;
-    height: 550px;
+    margin: 50px 80px;
+    width: 1350px;
+    height: 600px;
     position: relative;
-    border-radius: 10%;
+    
 }
 .head{
     position: absolute;
-    top: 25%;
-    left: 55%; 
+    top: 32%;
+    left: 50%; 
     color: rgb(18, 78, 181);
     font-size: 40px;
 }
 .head h1{
     font-family: 'Lexend Giga', sans-serif;
+    color: #ffff;
+    font-size: 90px;
 }
 .head p{
     font-family: 'Lexend Giga', sans-serif;
+    color: #ffff;
 }
 .line1{
     border: 1px solid rgb(147, 147, 212);
