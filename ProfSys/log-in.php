@@ -77,7 +77,8 @@
                 <button type="submit" name="submit" class="submit" value="Login"> Log-in</button>
             </div>
             <div class="hhh">
-                Don't have an account?<a href="registration.php" style="text-decoration: none; color: black; :hover { color: black; }">   Sign up</a>
+                Don't have an account?<a href="registration.php" class="underline">
+                 Sign up</a>
             </div>
             <div class="bottom">
                 <div class="left">

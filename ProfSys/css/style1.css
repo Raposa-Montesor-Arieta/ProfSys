@@ -118,6 +118,7 @@ i{
     font-size: small;
     color: #030303;
     margin-bottom: 1.5rem;
+    font-weight: 100;
 }
 .left{
     display: flex;
@@ -126,3 +127,10 @@ label a{
     color: #fff;
     text-decoration: none;
 }
+a.underline {
+    text-decoration: none;
+    color: black;
+    }
+    a.underline:hover {
+        text-decoration: underline;
+    }
