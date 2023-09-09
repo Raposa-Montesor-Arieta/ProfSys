@@ -79,7 +79,21 @@ $query = "SELECT * FROM profs";
     </div>
 </a>
 </div>
-
+<br><br><br>
+    <div class="line1"></div>
+    <div class="image2">
+        <img src="image/bg1.png">
+            <div class="head1">
+                <h1>Connecting Knowledge<br> Seekers with Expert Professors</h1>
+                <h2>Empowering Education Online</h2>
+            </div>
+    </div>
+    
+    <div class="line1"></div>
+    <div class="contain">
+        
+    </div>
+</div>
 </div>
     
   
