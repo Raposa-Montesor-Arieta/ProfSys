@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans serif;
     background-color: #1876f2;
 }
 
@@ -17,6 +17,7 @@ body {
 h2 {
     text-align: center;
     color: #fff;
+    font-weight: 600;
 }
 
 label {
@@ -35,7 +36,6 @@ input[type="email"] {
 }
 
 button[type="submit"] {
-    background-color: #007BFF;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -44,9 +44,11 @@ button[type="submit"] {
     cursor: pointer;
     width: 40%;
 }
-.kkk{
-    padding-left: 55px;
+.kkk {
+    justify-content: space-evenly;
+    display: flex;
 }
 button[type="submit"]:hover {
-    background-color: #0056b3;
-}
+    background-color: black;
+    color: white;
+    }
