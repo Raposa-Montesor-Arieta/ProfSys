@@ -50,6 +50,18 @@ $conn->close();
         background-color: #fff;
     }
 
+    .odd td, .even td {
+        text-align: center;
+    }
+
+    div#professorsTable_wrapper {
+        display: grid;
+    }
+    div#professorsTable_filter {
+        margin-bottom: 1rem;
+    }
+    
+
     /* Reduce font size for the table content */
     table {
         font-size: 16px; /* You can adjust this value as needed */
@@ -90,10 +102,10 @@ $conn->close();
     <nav>
         <div class="nav-left">
             <img src="image/logo.png" class="logo">
-            <ul>
+            <!-- <ul>
                 <a href="home.php"><li><img src="image/home.png"></li></a>
                 <a href="#"><li><img src="image/inbox.png"></li></a>
-            </ul>
+            </ul> -->
         </div>
         <div class="nav-right">
 
@@ -106,7 +118,8 @@ $conn->close();
             </div>
         </div>
     </nav>
-    <div class="contain">
+    <div class="contain" style="
+    width: 100rem;margin: 7rem auto;background-color: transparent;">
         <table id="professorsTable" class="display">
             <thead>
                 <tr>

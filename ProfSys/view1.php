@@ -32,10 +32,10 @@ if (isset($_GET['id'])) {
 <nav>
     <div class="nav-left">
         <img src="image/logo.png" class="logo">
-        <ul>
+        <!-- <ul>
             <li><img src="image/home.png"></li>
             <li><img src="image/inbox.png"></li>
-        </ul>
+        </ul> -->
     </div>
     <div class="nav-right">
 

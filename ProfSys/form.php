@@ -15,10 +15,10 @@ include 'functions/connection.php';
     <nav>
         <div class="nav-left">
             <img src="image/logo.png" class="logo">
-            <ul>
+            <!-- <ul>
                 <li><img src="image/home.png"></li>
                 <li><img src="image/inbox.png"></li>
-            </ul>
+            </ul> -->
         </div>
         <div class="nav-right">
 
@@ -54,7 +54,7 @@ include 'functions/connection.php';
                 </div>
                 <div class="form-group">
                     <label for="contact_number">Contact Number:</label>
-                    <input type="text" id="contact_number" name="contact_number" required>
+                    <input type="number" id="contact_number" maxlength="11" max="9999999999" name="contact_number" required>
                 </div>
                 <div class="form-group">
                     <label for="specialization">Specialization:</label>
