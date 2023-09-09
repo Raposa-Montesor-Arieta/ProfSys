@@ -42,7 +42,7 @@ $query = "SELECT * FROM profs";
             </div>
         </div>
     </nav>
-    
+    <div class="contain">
     <div class="left_img">
         <img src="image/bg.png">
         <div class="head">
@@ -50,6 +50,7 @@ $query = "SELECT * FROM profs";
             <p>One-on-One Path<br>to Success</p>
         </div>
     </div>
+</div><br>
     <div class="line1"></div><br><br>
     <div class="container">
     <div class="nums">
@@ -64,7 +65,20 @@ $query = "SELECT * FROM profs";
         <h1><?php echo $conn->query("SELECT * FROM profs where status = 1 ")->num_rows ?></h1>
     </div>
 </a>
+<a href="list.php" class="button-link">
+    <div class="box1 button">
+        <h2>Professors Available</h2>
+        <h1><?php echo $conn->query("SELECT * FROM profs where status = 1 ")->num_rows ?></h1>
+    </div>
+</a>
+<a href="list.php" class="button-link">
+    <div class="box1 button">
+        <h2>Professors Available</h2>
+        <h1><?php echo $conn->query("SELECT * FROM profs where status = 1 ")->num_rows ?></h1>
+    </div>
+</a>
 </div>
+
 </div>
     
   
