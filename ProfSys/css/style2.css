@@ -35,20 +35,22 @@ input[type="email"] {
     border-radius: 30px;
 }
 
-button[type="submit"] {
-    color: #fff;
+button {
+    background-color: #ffffff;
     padding: 10px 15px;
     border: none;
     outline: none;
     border-radius: 30px;
     cursor: pointer;
     width: 40%;
-}
+    }
+    button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    }
+
 .kkk {
     justify-content: space-evenly;
     display: flex;
 }
-button[type="submit"]:hover {
-    background-color: black;
-    color: white;
-    }
+
