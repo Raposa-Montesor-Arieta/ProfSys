@@ -1,4 +1,6 @@
-
+<?php
+    include 'functions/connection1.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

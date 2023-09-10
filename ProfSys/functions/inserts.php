@@ -7,11 +7,25 @@ if (isset($_POST['submit'])) {
     $last_name = $_POST["last_name"];
     $age = $_POST["age"];
     $contact_number = $_POST["contact_number"];
-    $special = $_POST ["specialization"];
+    $special = $_POST["specialization"];
     $address = $_POST["address"];
     $email = $_POST["email"];
     $educational_background = $_POST["textarea"];
     $work = $_POST["work_experience"];
+
+    // Validate the email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strpos($email, "@gmail.com") === false) {
+        echo "<script>alert('Invalid email format. Please use a valid Gmail address.'); </script>";
+        echo "<script>window.location.assign('../form.php')</script>";
+        exit; // Prevent further execution
+    }
+
+    // Validate the contact number to contain only numbers
+    if (!is_numeric($contact_number)) {
+        echo "<script>alert('Invalid contact number. Please enter only numeric digits.'); </script>";
+        echo "<script>window.location.assign('../form.php')</script>";
+        exit; // Prevent further execution
+    }
 
     // Handling image upload
     $img_name = $_FILES['img']['name'];

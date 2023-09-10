@@ -1,7 +1,7 @@
 <?php
     include "connection.php";
 
-            $p_id = $_GET['prof_id'];
+            $p_id = $_GET['p_id'];
             if (isset($_GET['submit'])) {
                                  
                 if (isset($_POST['submit'])) { // Handle the update or insert action
