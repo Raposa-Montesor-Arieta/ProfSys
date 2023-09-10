@@ -69,11 +69,12 @@ include 'functions/connection.php';
                 <div class="form-group">
                     <label for="age">Age:</label>
                     <input type="number" id="age" name="age" required
-                    value="<?php echo $row['age'];?>">
+                    value="<?php echo $row['age'];?>" >
+                    <br>
                 </div>
                 <div class="form-group">
                     <label for="contact_number">Contact Number:</label>
-                    <input type="number" id="contact_number" maxlength="11" max="9999999999" name="contact_number" required value="<?php echo $row['contact_num'];?>">
+                    <input type="number" id="contact_number" maxlength="11" max="9999999999" min="9999999999" name="contact_number" required value="<?php echo $row['contact_num'];?>">
                 </div>
                 <div class="form-group">
                     <label for="textarea">Specialization:</label>

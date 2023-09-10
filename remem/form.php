@@ -55,10 +55,12 @@ include 'functions/connection.php';
                 <div class="form-group">
                     <label for="age">Age:</label>
                     <input type="number" id="age" name="age" required>
+                    <br>
+                    <span id="age-error" class="error-message" style="margin-top: 2rem;"></span>
                 </div>
                 <div class="form-group">
                     <label for="contact_number">Contact Number:</label>
-                    <input type="number" id="contact_number" maxlength="11" max="9999999999" name="contact_number" required>
+                    <input type="number" id="contact_number" maxlength="11" max="9999999999" min="9000000000" name="contact_number" required>
                 </div>
                 <div class="form-group">
                     <label for="specialization">Specialization:</label>
@@ -90,6 +92,36 @@ include 'functions/connection.php';
         </div>
         <button type="submit" name="submit" value="submit">Submit</button>
     </div>
+
+
+    <script>
+        // Get a reference to the age input element
+        const ageInput = document.getElementById('age');
+
+        // Get a reference to the age error message element
+        const ageError = document.getElementById('age-error');
+
+        // Add an event listener to the input field to validate the age
+        ageInput.addEventListener('input', function () {
+            const enteredAge = parseInt(ageInput.value, 10);
+
+            // Define the valid age range (e.g., 0 to 120)
+            const minAge = 18;
+            const maxAge = 85;
+
+            if (isNaN(enteredAge) || enteredAge < minAge || enteredAge > maxAge) {
+                // Display an error message if the age is invalid
+                // ageError.textContent = 'Invalid age. Please enter a valid age between ' + minAge + ' and ' + maxAge + '.';
+                ageInput.setCustomValidity('Invalid age');
+            } else {
+                // Clear the error message if the age is valid
+                ageError.textContent = '';
+                ageInput.setCustomValidity('');
+            }
+        });
+    </script>
+
+
 </form>
 </body>
 </html>
