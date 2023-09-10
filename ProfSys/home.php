@@ -1,5 +1,6 @@
 <?php
 include 'functions/connection.php';
+require_once("functions/auth.php");
 
 $query = "SELECT * FROM profs";
     $result = mysqli_query($conn, $query);
@@ -7,6 +8,7 @@ $query = "SELECT * FROM profs";
     // Get the number of rows returned by the query
     $num_rows = mysqli_num_rows($result);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,20 +28,19 @@ $query = "SELECT * FROM profs";
     <nav>
         <div class="nav-left">
             <img src="image/logo.png" class="logo">
-            <!-- <ul>
+            <ul>
                 <a href="#"><li><img src="image/home.png"></li></a>
                 <a href="list.php"><li><img src="image/inbox.png"></li></a>
-            </ul> -->
+            </ul>
         </div>
         <div class="nav-right">
 
             <div class="search-box">
-                <img src="image/search.png">
-                <input type="text" placeholder="Search"> 
+            Welcome&nbsp;<?= $_SESSION['login_Username'] ?>!
             </div>
             <div class="nav-user-icon online">
                 <!-- <img src="image/profile.jpg"> -->
-                <a class="text-decoration-none" href="log-in.php"><p>Log-In</p></a>
+                <a class="btn btn-sm btn-danger rounded-pill col-lg-4 col-md-6 col-sm-12" href="functions/logout.php">Logout</a>
             </div>
         </div>
     </nav>

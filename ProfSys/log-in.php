@@ -70,11 +70,11 @@ require_once("functions/auth.php");
             </div>
             <div class="input-field">
             <form action="functions/log-in_code.php" method="POST" id="loginForm">
-                <input type="text" id="username" class="input" placeholder="username" name="Username" value="<?= isset($_COOKIE['username']) ? $_COOKIE['username'] : '' ?>" required autocomplete="off">
+                <input type="text" id="Username" class="input" placeholder="Username" name="Username" value="<?= isset($_COOKIE['Username']) ? $_COOKIE['username'] : '' ?>" required autocomplete="off">
                 <i class="bx bx-user"></i>
             </div>
             <div class="input-field">
-            <input type="password" id="password" class="input" placeholder="password" name="Password" value="<?= isset($_COOKIE['password']) ? $_COOKIE['password'] : '' ?>" required autocomplete="off">
+            <input type="password" id="Password" class="input" placeholder="Password" name="Password" value="<?= isset($_COOKIE['Password']) ? $_COOKIE['password'] : '' ?>" required autocomplete="off">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-field">
@@ -86,7 +86,7 @@ require_once("functions/auth.php");
             </div>
             <div class="bottom">
                 <div class="left">
-                <input type="checkbox" value="" id="rememberMe" name="rememberMe" <?= (isset($_COOKIE['username']) && isset($_COOKIE['password'])) ? "checked" : '' ?>>
+                <input type="checkbox" value="" id="rememberMe" name="rememberMe" <?= (isset($_COOKIE['Username']) && isset($_COOKIE['Password'])) ? "checked" : '' ?>>
                 <label for="rememberMe">Remember Me</label>
                 </div>
                 <div class="right">

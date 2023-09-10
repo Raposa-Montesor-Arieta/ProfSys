@@ -112,14 +112,14 @@ if($result->num_rows > 0){
         /**
          * Store Login Credential
          */
-        setcookie('username', $_POST['Username'], ( time() + ((365 * 24 * 60 * 60) *3) ));
-        setcookie('password', $_POST['Password'], ( time() + ((365 * 24 * 60 * 60) *3) ));
+        setcookie('Username', $_POST['Username'], ( time() + ((365 * 24 * 60 * 60) *3) ));
+        setcookie('Password', $_POST['Password'], ( time() + ((365 * 24 * 60 * 60) *3) ));
     }else{
         /**
          * Delete Login Credential
          */
-        setcookie('username', $_POST['Username'], ( time() - (24 * 60 * 60) ));
-        setcookie('password', $_POST['Password'], ( time() - (24 * 60 * 60) ));
+        setcookie('Username', $_POST['Username'], ( time() - (24 * 60 * 60) ));
+        setcookie('Password', $_POST['Password'], ( time() - (24 * 60 * 60) ));
     }
     echo "<script>location.replace('../home.php')</script>";
 }else{

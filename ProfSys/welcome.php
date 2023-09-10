@@ -7,7 +7,7 @@ $query = "SELECT * FROM profs";
     // Get the number of rows returned by the query
     $num_rows = mysqli_num_rows($result);
 ?>
-<?php require_once("auth.php"); ?>
+<?php require_once("functions/auth.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@ $query = "SELECT * FROM profs";
             </div>
             <div class="nav-user-icon online">
                 <!-- <img src="image/profile.jpg"> -->
-                <a class="btn btn-sm btn-danger rounded-pill col-lg-4 col-md-6 col-sm-12" href="logout.php">Logout</a>
+                <a class="btn btn-sm btn-danger rounded-pill col-lg-4 col-md-6 col-sm-12" href="functions/logout.php">Logout</a>
             </div>
         </div>
     </nav>
