@@ -1,5 +1,6 @@
 <?php
 include 'functions/connection.php';
+require_once("functions/auth.php");
 
 // Fetch data from the database
 $sql = "SELECT prof_id, first_name, last_name, age, email, contact_num FROM profs";

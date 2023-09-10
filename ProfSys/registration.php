@@ -28,15 +28,17 @@
             </div>
             <div class="input-field">
             <form action="functions/reg_code.php" method="POST">
-                <input type="text" class="input" placeholder="Username" name="Username" required>
+                <input type="text" class="input" placeholder="Username" name="Username" required> 
                 <i class="bx bx-user"></i>
+                <!-- i changed the name from capital to lowercase -->
             </div>
             <div class="input-field">
                 <input type="password" class="input" placeholder="Password" name="Password" required>
                 <i class="bx bx-lock-alt"></i>
+                <!-- i changed the name from capital to lowercase -->
             </div>
             <div class="input-field">
-                <button type="submit" name="submit" class="submit" value="Login">Register</button>
+                <input type="submit" name="register" class="submit" value="Register"></input>
             </div>
             </div>
         </div>
