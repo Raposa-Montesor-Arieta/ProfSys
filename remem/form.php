@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'functions/connection.php';
 ?>
 <!DOCTYPE html>
@@ -15,19 +16,22 @@ include 'functions/connection.php';
     <nav>
         <div class="nav-left">
             <img src="image/logo.png" class="logo">
-            <!-- <ul>
+            <ul>
                 <li><img src="image/home.png"></li>
                 <li><img src="image/inbox.png"></li>
-            </ul> -->
+            </ul>
         </div>
         <div class="nav-right">
 
             <div class="search-box">
-                <img src="image/search.png">
-                <input type="text" placeholder="Search"> 
+            <!-- WELCOME:&nbsp;<?= $_SESSION['login_username'] ?> -->
+            <input type="text" value="Search here..." >    
+                <input type="text" > 
             </div>
             <div class="nav-user-icon online">
-                <img src="image/profile.jpg">
+            Welcome&nbsp;<?= $_SESSION['login_username'] ?>!
+                <!-- <img src="image/profile.jpg"> -->
+                <a class="btn btn-sm btn-danger rounded-pill col-lg-4 col-md-6 col-sm-12" href="logout.php">Logout</a>
             </div>
         </div>
     </nav>

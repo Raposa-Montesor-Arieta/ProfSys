@@ -14,9 +14,9 @@ $query = "SELECT * FROM profs";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100;300&display=swap" rel="stylesheet">
@@ -33,10 +33,14 @@ $query = "SELECT * FROM profs";
             </ul>
         </div>
         <div class="nav-right">
-            Welcome&nbsp;<?= $_SESSION['login_username'] ?>!
-        </div>
+            <div class="search-box">
+            <!-- WELCOME:&nbsp;<?= $_SESSION['login_username'] ?> -->
+                <input type="text" value="Search here..." > 
+            </div>
         <!-- <input type="text" value="Search here..." >  -->
+        
             <div class="nav-user-icon online">
+            Welcome&nbsp;<?= $_SESSION['login_username'] ?>!
                 <!-- <img src="image/profile.jpg"> -->
                 <a class="btn btn-sm btn-danger rounded-pill col-lg-4 col-md-6 col-sm-12" href="logout.php">Logout</a>
             </div>

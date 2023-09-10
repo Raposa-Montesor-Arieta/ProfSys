@@ -28,7 +28,9 @@ include 'functions/connection.php';
                 <input type="text" value="Search here..." >    
             </div>
             <div class="nav-user-icon online">
-            <a class="btn btn-sm btn-danger rounded-pill col-lg-4 col-md-6 col-sm-12" href="logout.php">Logout</a>
+            Welcome&nbsp;<?= $_SESSION['login_username'] ?>!
+                <!-- <img src="image/profile.jpg"> -->
+                <a class="btn btn-sm btn-danger rounded-pill col-lg-4 col-md-6 col-sm-12" href="logout.php">Logout</a>
             </div>
         </div>
     </nav>
